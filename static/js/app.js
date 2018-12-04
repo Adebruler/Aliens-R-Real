@@ -72,7 +72,6 @@ submit.on("click", function() {
       currKey = inputCats[cat];
     };
     currInput = inputs[cat];
-    console.log(currInput)
     // If an input is given, filter inline by that input
     if (currInput != "(all)"){
       sightings = sightings.filter(sighting => sighting[currKey]=== currInput);
@@ -93,5 +92,23 @@ submit.on("click", function() {
       cell.text(value);
     });
   });
-
+  // Inform user if selection is empty with meme relevant to 2010
+  if (sightings.length == 0){
+    var img = document.getElementById('myImg');
+    var modalImg = document.getElementById("img01");
+        modal.style.display = "block";
+        modalImg.src = img.src;
+  };
 });
+
+// Code for modal lifted from <https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_img>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
