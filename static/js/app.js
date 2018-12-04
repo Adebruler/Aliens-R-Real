@@ -72,8 +72,9 @@ submit.on("click", function() {
       currKey = inputCats[cat];
     };
     currInput = inputs[cat];
+    console.log(currInput)
     // If an input is given, filter inline by that input
-    if (!currInput == ""){
+    if (currInput != "(all)"){
       sightings = sightings.filter(sighting => sighting[currKey]=== currInput);
     };
   };
@@ -81,11 +82,10 @@ submit.on("click", function() {
   // select table
   var tbody = d3.select("tbody");
 
-  // todo: determine code for clearing table
-  // $("#ufo-table tbody").empty();
-  // tbody.empty();
+  // Use a JQuery statement to clear table
+  $("#mod-table").empty();
 
-  // Append each filtered sighting into the table
+  // Append each filtered sighting into the table without refreshing page or filters
   sightings.forEach(function(sighting) {
     var row = tbody.append("tr");
     Object.entries(sighting).forEach(function([key, value]) {
