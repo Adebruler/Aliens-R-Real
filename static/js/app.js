@@ -81,6 +81,7 @@ submit.on("click", function() {
   // select table
   var tbody = d3.select("tbody");
 
+  // todo: determine code for clearing table
   // $("#ufo-table tbody").empty();
   // tbody.empty();
 
