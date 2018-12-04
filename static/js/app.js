@@ -94,6 +94,7 @@ submit.on("click", function() {
   });
   // Inform user if selection is empty with meme relevant to 2010
   if (sightings.length == 0){
+    console.log("No data available for your criteria.")
     var img = document.getElementById('myImg');
     var modalImg = document.getElementById("img01");
         modal.style.display = "block";
