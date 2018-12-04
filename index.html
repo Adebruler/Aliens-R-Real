@@ -34,14 +34,34 @@
               <div class="panel-body">
                 <form>
                   <div class="form-group">
-                    <ul class="list-group" id="filters">
-                      <li class="filter list-group-item">
-                        <label for="date">Enter a Date</label>
-                        <input class="form-control" id="datetime" type="text" placeholder="1/11/2011">
-                      </li>
-                    </ul>
+                    <!-- <ul class="list-group" id="filters">
+                      <li class="filter list-group-item"> -->
+                        <!-- <label for="date">Enter a Date</label>
+                        <input class="form-control" id="datetime" type="text" placeholder="1/11/2011"> -->
+                        <label for="sel-date">Select date:</label>
+                        <select class="form-control" id="sel-date">
+                          <option></option>
+                        </select>
+                        <label for="sel-city">Select city:</label>
+                        <select class="form-control" id="sel-city">
+                          <option></option>
+                        </select>
+                        <label for="sel-state">Select state:</label>
+                        <select class="form-control" id="sel-state">
+                          <option></option>
+                        </select>
+                        <label for="sel-country">Select country:</label>
+                        <select class="form-control" id="sel-country">
+                          <option></option>
+                        </select>
+                        <label for="sel-shape">Select shape:</label>
+                        <select class="form-control" id="sel-shape">
+                          <option></option>
+                        </select>
+                      <!-- </li>
+                    </ul> -->
                   </div>
-                  <button id="filter-btn" type="submit" class="btn btn-default">Filter Table</button>
+                  <button id="filter-btn" type="submit" class="btn btn-info">Filter Table</button>
                 </form>
               </div>
             </div>
@@ -49,7 +69,7 @@
         </div>
         <div class="col-md-10">
           <div id="table-area" class="">
-            <table id="ufo-table" class="table table-striped table-bordered">
+            <table id="ufo-table" class="table table-striped">
               <thead>
                 <tr>
                   <th class="table-head">Date</th>
@@ -67,9 +87,9 @@
         </div>
       </div>
     </div>
-    <footer class="footer">
+    <!-- <footer class="footer">
       <span class="bottom">UFO Sightings</span>
-    </footer>
+    </footer> -->
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
   <script src="static/js/data.js"></script>
